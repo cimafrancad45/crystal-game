@@ -1,35 +1,51 @@
 <!DOCtype html>
+
 <head>
     <title>Crystal Madness!</title>
     <meta charset="UTF-8">
-    <link rel = "assets/css/reset.css" type = "css/text">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+    <link rel = "stylesheet" type="css/text" href="/assets/css/reset.css">
+    <link rel="stylesheet" type="css/text" href="/assets/css/style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB"
+        crossorigin="anonymous">
 </head>
 
 <body background="assets/images/background.png">
-   
-    <span class = "bg-primary"><h1>Crystals of Light</h1></span>
-    <div class = "container bg-light"> 
-       Welcome to Crystal Madness! The goal of the game is to reach the target score without going over. Click on one of the four crystals below to increase your score. Each id is different, good luck!
-</div>
-    <div class ="text-center">
-    <button id ="startButton">Start!</button>
-</div>
-    <br>
-    <div id = "targetScore" class = "container bg-light">Target Score:</div>
-    <br>
-    <div class = "container text-center">
-    <img src = "assets/images/crystal1.png" class="crystal-btn" id = "crystal-A"> 
-    <img src = "assets/images/crystal2.png" class="crystal-btn" id = "crystal-B">
-    <img src = "assets/images/crystal3.png" class="crystal-btn" id = "crystal-C"> 
-    <img src = "assets/images/crystal4.png" class="crystal-btn" id = "crystal-D">
+    <div class="jumbotron bg-primary text-light text-center">
+        <span>
+            <h1>Crystal Madness.</h1>
+        </span>
+    </div>
+
+    <div class="container bg-light border text-center game-instructions" style= "padding:15px">
+        <h3>Welcome to Crystal Madness!</h3>
+        <hr>
+        <ul class="text-left list">
+            <li>The goal of the game is to reach the target score without going over.</li>
+            <li>Click on one of the four crystals below to increase your score.</li>
+            <li>Each crystal value is different and changes each time you start the game.</li>
+        </ul>
+        <hr>
+        <span id="game-status">
+            <h4>Press Start to Begin!</h4>
+        </span>
+        <div class="btn btn-primary" id="startButton">Start!</div>
     </div>
     <br>
-    <div class ="container bg-light">
-    <div id = "currentScore">Current Score:</div>
-    <div id = "wins">Wins: 0</div>
-    <div id = "losses">Losses: 0</div>
+    <div class="container border bg-light text-center game-box" style= "padding:15px">
+        <div id="targetScore" class="container"><h5>Target Score: 0</h5></div>
+        <div class="container text-center">
+            <img src="assets/images/crystal1.png" class="crystal-btn" id="crystal-A">
+            <img src="assets/images/crystal2.png" class="crystal-btn" id="crystal-B">
+            <img src="assets/images/crystal3.png" class="crystal-btn" id="crystal-C">
+            <img src="assets/images/crystal4.png" class="crystal-btn" id="crystal-D">
+        </div>
+        <div class="container border">
+            <div id="currentScore"><h5>Current Score: 0</h5></div>
+            <div id="wins"><h5>Wins: 0</h5></div>
+            <div id="losses"><h5>Losses: 0</h5></div>
+        </div>
     </div>
-    <script src = "assets/javascript/jquery-3.3.1.min.js"></script>
-    <script src = "assets/javascript/game.js"></script>
+    <script src="assets/javascript/jquery-3.3.1.min.js"></script>
+    <script src="assets/javascript/game.js"></script>
+    <br>
 </body>

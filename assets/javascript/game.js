@@ -14,6 +14,7 @@ var losses = 0;
 var active = false;
 var targetScore = 0;
 var scoreCounter = 0;
+var turnsUsed = 0;
 
 function shuffle(array) {
     var currentIndex = array.length, temporaryValue, randomIndex;
@@ -51,11 +52,11 @@ $("#startButton").click(function () {
     scoreCounter = 0;
     targetScore = Math.floor(10 + Math.random() * 90);
 
-    $("#startButton").text("Restart");
-    $("#targetScore").text("Target Score: " + targetScore);
-    $("#currentScore").text("Current Score: " + scoreCounter);
-    $("#wins").text("Wins: " + wins);
-    $("#losses").text("Losses: " + losses);
+    $("#startButton").text("Reset");
+    $("#targetScore").html("<h5>Target Score: " + targetScore + "</h5>");
+    $("#currentScore").html("<h5>Current Score: " + scoreCounter + "</h5>");
+    $("#wins").html("<h5>Wins: " + wins + "</h5>");
+    $("#losses").html("<h5>Losses: " + losses + "</h5>");
 
 });
 
@@ -65,7 +66,8 @@ $("#crystal-A").click(function () {
     if (active == true) {
         scoreCounter = scoreCounter + crystalA;
         console.log(scoreCounter);
-        $("#currentScore").text("Current Score:" + scoreCounter);
+        turnsUsed++;
+         $("#currentScore").html("<h5>Current Score: " + scoreCounter + "</h5>");
         scoreCheck();
     }
 });
@@ -74,7 +76,8 @@ $("#crystal-B").click(function () {
     if (active == true) {
         scoreCounter = scoreCounter + crystalB;
         console.log(scoreCounter);
-        $("#currentScore").text("Current Score:" + scoreCounter);
+        turnsUsed++;
+         $("#currentScore").html("<h5>Current Score: " + scoreCounter + "</h5>");
         scoreCheck();
     };
 });
@@ -83,7 +86,8 @@ $("#crystal-C").click(function () {
     if (active == true) {
         scoreCounter = scoreCounter + crystalC;
         console.log(scoreCounter);
-        $("#currentScore").text("Current Score:" + scoreCounter);
+        turnsUsed++;
+        $("#currentScore").html("<h5>Current Score: " + scoreCounter + "</h5>");
         scoreCheck();
     };
 });
@@ -92,7 +96,8 @@ $("#crystal-D").click(function () {
     if (active == true) {
         scoreCounter = scoreCounter + crystalD;
         console.log(scoreCounter);
-        $("#currentScore").text("Current Score:" + scoreCounter);
+        turnsUsed++;
+        $("#currentScore").html("<h5>Current Score: " + scoreCounter + "</h5>");
         scoreCheck();
     };
 });
@@ -119,10 +124,11 @@ function resetGame() {
     active = false;
     targetScore = 0;
     scoreCounter = 0;
+    turnsUsed = 0;
 
     $("#startButton").text("Play Again");
-    $("#targetScore").text("Target Score: " + targetScore);
-    $("#currentScore").text("Current Score: " + scoreCounter);
-    $("#wins").text("Wins: " + wins);
-    $("#losses").text("Losses: " + losses);
+    $("#targetScore").html("<h5>Target Score: " + targetScore + "</h5>");
+    $("#currentScore").html("<h5>Current Score: " + scoreCounter + "</h5>");
+    $("#wins").html("<h5>Wins: " + wins + "</h5>");
+    $("#losses").html("<h5>Losses: " + losses + "</h5>");
 }
