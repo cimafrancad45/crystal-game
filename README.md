@@ -1,2 +1,4 @@
 # crystal-game
-A score counting game made using javascript and jquery.
+A simple score counting game made using javascript and jquery.
+
+https://cimafrancad45.github.io/crystal-game/
